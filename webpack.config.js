@@ -3,34 +3,35 @@
  * Infinisoft Inc.
  * www.infini-soft.com
  */
+
 const { merge } = require('webpack-merge');
 const common = require('../../../dev/config/webpack.common');
 const path = require('path');
 const { ModuleFederationPlugin } = require('webpack').container;
-const deps = require('./package.json').peerDependencies
+const {peerDependencies, name} = require('./package.json')
 
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
     static: path.join(process.cwd(), 'dist'),
     hot: true,
-    port: 8082,
+    port: {{port}},
   },
   devtool: 'inline-source-map',
   plugins: [
     new ModuleFederationPlugin({
-      name: 'button',
+      name,
       filename: 'remoteEntry.js',
       exposes: {
-        './Button': './src/button',
+        '{{{ import }}}': './src/component',
       },
       shared: {
-        ...deps,
-        react: { singleton: true, eager: true, requiredVersion: deps.react },
+        ...peerDependencies,
+        react: { singleton: true, eager: true, requiredVersion: peerDependencies.react },
         'react-dom': {
           singleton: true,
           eager: true,
-          requiredVersion: deps['react-dom'],
+          requiredVersion: peerDependencies['react-dom'],
         },
       },
     }),

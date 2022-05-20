@@ -1,9 +1,9 @@
 /// <reference types="react" />
 
-declare module 'button/Button' {
-  export type ButtonProps = {
+declare module '{{{module}}}' {
+  export type {{component}}Props = {
     message?: string;
   };
-  const Button: ({ message }: ButtonProps) => JSX.Element;
-  export default Button;
+  const {{component}}: ({ message }: {{component}}Props) => JSX.Element;
+  export default {{component}};
 }
