@@ -1,0 +1,26 @@
+{
+  "name": "button",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "author": "Infinisoft Inc. <info@infini-soft.com>",
+  "homepage": "https://www.kitchen.infini-soft.com/",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "webpack -c webpack.config.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage&& start coverage/lcov-report/index.html",
+    "build:analyze": "webpack -c ../../dev/config/webpack.analyze.js",
+    "build:prod": "webpack -c webpack.config.prod.js",
+    "start:dev": "webpack serve -c webpack.config.js --open",
+    "serve:dist": "serve -s dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
