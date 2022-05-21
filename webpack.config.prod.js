@@ -15,7 +15,7 @@ module.exports = merge(common, {
       name,
       filename: 'remoteEntry.js',
       exposes: {
-        '{{{ import }}}': './src/component',
+        './{{{ component }}}': './src/component',
       },
       shared: {
         ...peerDependencies,
