@@ -10,7 +10,7 @@
     "build:dev": "webpack -c webpack.config.js",
     "test": "jest",
     "test:coverage": "jest --coverage&& start coverage/lcov-report/index.html",
-    "build:analyze": "webpack -c ../../dev/config/webpack.analyze.js",
+    "build:analyze": "webpack -c ../../../dev/config/webpack.analyze.js",
     "build:prod": "webpack -c webpack.config.prod.js",
     "start:dev": "webpack serve -c webpack.config.js --open",
     "serve:dist": "serve -s dist"
