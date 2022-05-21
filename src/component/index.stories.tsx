@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import {{{component}}} from '.';
 
 // https://storybook.js.org/docs/react/writing-stories/introduction

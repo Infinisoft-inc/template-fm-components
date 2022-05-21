@@ -5,7 +5,7 @@
   "private": true,
   "author": "Infinisoft Inc. <info@infini-soft.com>",
   "homepage": "https://www.kitchen.infini-soft.com/",
-  "license": "MIT",
+  "license": "INFINISOFT",
   "scripts": {
     "build:dev": "webpack -c webpack.config.js",
     "test": "jest",
