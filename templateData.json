@@ -1,7 +1,0 @@
-{
-  "name": "button",
-  "component":"Button",
-  "import": "./Button",
-  "module":"button/Button",
-  "port": 8088
-}
