@@ -4,20 +4,15 @@
  * www.infini-soft.com
  */
 
-type Size = 'small' | 'large'
+import { Size } from '../types'
 
-type {{{component}}}Props = {
-  message?: string
-  backgroundColor?: string
-  size?: Size
-}
 
-type {{{component}}}Presets = { [P in Size]: {
+export type SizePresets = { [P in Size]: {
   height: string
   width: string
 } }
 
-const buttonPresets: {{{component}}}Presets = {
+export const sizePresets: SizePresets = {
   large: {
     width: '200px',
     height: '125px'
