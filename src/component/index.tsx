@@ -7,6 +7,7 @@
  */
 import React, { Suspense } from 'react';
 import {sizePresets} from './presets/size'
+import { {{{component}}} } from './types';
 
 const {{ component }} = ({ message = 'default', backgroundColor = 'blue', size = 'large', ...props }: {{ component }}Props) => {
   const style = { backgroundColor, ...sizePresets[size] }
