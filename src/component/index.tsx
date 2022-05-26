@@ -6,6 +6,7 @@
  * Module Federated Micro Component
  */
 import React, { Suspense } from 'react';
+import css from './index.module.css'
 import {sizePresets} from './presets/size'
 import { {{{component}}}Props } from './types';
 
@@ -13,10 +14,12 @@ const {{ component }} = ({ message = 'default', backgroundColor = 'blue', size =
   const style = { backgroundColor, ...sizePresets[size] }
 
 return <Suspense>
-  <input type='text' {...props} />
+  <div className={css.root}>
   <button {...props} style={style} >
     Hello there
   </button>
+  </div>
+
 </Suspense>
 }
 
