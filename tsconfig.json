@@ -19,7 +19,7 @@
     "mock/**/*",
     "src/**/*",
     "config/*",
-    "typings.d.ts", "./button.d.ts" ],
+    "typings.d.ts" ],
   "exclude": [
     "node_modules",
     "lib",
