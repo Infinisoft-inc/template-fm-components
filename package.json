@@ -7,12 +7,12 @@
   "homepage": "https://www.kitchen.infini-soft.com/",
   "license": "INFINISOFT",
   "scripts": {
-    "build:dev": "webpack -c webpack.config.js& yarn run build:federated:module:types",
+    "build:dev": "yarn run build:types& webpack -c webpack.config.js",
     "test": "jest",
     "test:coverage": "jest --coverage&& start coverage/lcov-report/index.html",
     "build:analyze": "webpack -c ../../../dev/config/webpack.analyze.js",
-    "build:federated:module:types": "tsc -p tsconfig.json -d --emitDeclarationOnly --outFile dist/types.d.ts --esModuleInterop",
-    "build:prod": "webpack -c webpack.config.prod.js& yarn run build:federated:module:types",
+    "build:types": "tsc -p tsconfig.json -d --emitDeclarationOnly --outFile dist/types.d.ts --esModuleInterop",
+    "build:prod": "yarn run build:types& webpack -c webpack.config.prod.js",
     "start:dev": "webpack serve -c webpack.config.js --open",
     "serve:dist": "serve -s dist"
   },
