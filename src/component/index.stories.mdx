@@ -9,10 +9,8 @@ export const Template = (args) => <{{{component}}} {...args} />;
 
 Insert descirption here.
 
-const _args = {style: {flex: 1}}
-
 <Canvas>
-  <Story name="{{{component}}}" args={_args}>
+  <Story name="{{{component}}}" args={ {flex: 1 } }>
     {Template.bind({})}
   </Story>
 </Canvas>
