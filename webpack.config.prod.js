@@ -15,7 +15,7 @@ module.exports = merge(common, {
       name,
       filename: 'remoteEntry.js',
       exposes: {
-        [infinisoft.moduleFederation.component]: './src/component',
+        [`./${infinisoft.moduleFederation.component}`]: './src/component',
       },
       shared: {
         ...peerDependencies,
