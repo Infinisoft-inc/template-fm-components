@@ -19,6 +19,7 @@
     "mock/**/*",
     "src/**/*",
     "config/*",
+    "modules/*.d.ts",
     "typings.d.ts" ],
   "exclude": [
     "node_modules",
