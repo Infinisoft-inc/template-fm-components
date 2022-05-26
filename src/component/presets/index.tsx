@@ -7,6 +7,6 @@
 import { {{{component}}}Props } from '../types'
 
 
-export type {{{component}}}Presets = { [P in {{{component}}}Props]: {} }
+export type {{{component}}}Presets = { }
 
 export const {{{name}}}Presets: {{{component}}}Presets = {}
