@@ -4,10 +4,6 @@
  * www.infini-soft.com
  */
 
-export type Size = 'small' | 'large'
-
 export type {{{component}}}Props = {
-  message?: string
   backgroundColor?: string
-  size?: Size
 }
