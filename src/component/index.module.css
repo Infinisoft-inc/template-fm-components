@@ -7,9 +7,5 @@
 .root {
   display: flex;
   margin-bottom: 1.5rem;
-  text-align: left;
 }
 
-.item {
-  flex: 1 1 50%;
-}

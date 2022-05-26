@@ -3,24 +3,23 @@
  * Infinisoft Inc.
  * www.infini-soft.com
  *
- * Module Federated Micro Component
+ * {{{component}}} Federated Micro Component
  */
-import React, { Suspense } from 'react';
+import React, { Suspense, forwardRef, ForwardedRef } from 'react';
 import css from './index.module.css'
-import {sizePresets} from './presets/size'
 import { {{{component}}}Props } from './types';
 
-const {{ component }} = ({ message = 'default', backgroundColor = 'blue', size = 'large', ...props }: {{ component }}Props) => {
-  const style = { backgroundColor, ...sizePresets[size] }
+const {{ component }} =  (props: {{{component}}}Props, ref: ForwardedRef<unknown>) => {
 
-return <Suspense>
-  <div className={css.root}>
-  <button {...props} style={style} >
-    Hello there
-  </button>
-  </div>
 
-</Suspense>
+  return <Suspense>
+    <div className={css.root}>
+      <button {...props} >
+        Hello there
+      </button>
+    </div>
+
+  </Suspense>
 }
 
-export default {{ component }};
+export default forwardRef<unknown, {{{component}}}Props>({{{component}}});

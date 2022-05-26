@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { {{component}} } from './index';
+import { {{{component}}}Props} from './types'
+
+<Meta title="TEMPLATE/{{{component}}}" component={ {{{component}}} } />
+
+export const Template = (args) => <{{{component}}} {...args}>Content</{{{component}}}>;
+
+# {{{component}}}
+
+Insert descirption here.
+
+<Canvas>
+  <Story name="{{{component}}}" args={{ style: { flex: 1 } }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="{{{component}}}" />
