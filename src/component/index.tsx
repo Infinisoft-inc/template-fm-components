@@ -14,7 +14,7 @@ const {{ component }} =  (props: {{{component}}}Props, ref: ForwardedRef<unknown
 
   return <Suspense>
     <div className={css.root}>
-      <button {...props} >
+      <button style={{...props}} >
         Hello there
       </button>
     </div>
