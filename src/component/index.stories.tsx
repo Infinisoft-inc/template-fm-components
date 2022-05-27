@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import {{{component}}}} from '.';
+import {{{component}}} from '.';
 
 export default {
   title: 'TEMPLATE/{{{component}}}',
