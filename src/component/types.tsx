@@ -5,5 +5,6 @@
  */
 
 export type {{{component}}}Props = {
-  backgroundColor?: string
+  title?: string
+  content?: string
 }
