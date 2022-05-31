@@ -9,7 +9,7 @@
   "scripts": {
     "build:dev": "yarn run build:types& webpack -c webpack.config.js",
     "test": "jest",
-    "test:coverage": "jest --coverage&& start coverage/lcov-report/index.html",
+    "test:coverage": "jest --coverage&& start analyze/coverage/lcov-report/index.html",
     "build:analyze": "webpack -c ../../../dev/config/webpack.analyze.js",
     "build:types": "tsc -p tsconfig.json -d --emitDeclarationOnly --outFile dist/types.d.ts --esModuleInterop",
     "build:prod": "yarn run build:types& webpack -c webpack.config.prod.js",
