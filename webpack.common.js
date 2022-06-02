@@ -33,7 +33,9 @@ module.exports = {
     }),
     new MomentLocalesPlugin(),
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './config/index.html',
+    }),
   ],
   output: {
     filename: '[name].[contenthash].js',
