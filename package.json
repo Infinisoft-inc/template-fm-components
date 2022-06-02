@@ -34,7 +34,6 @@
     "moduleFederation": {
       "title":"{{title}}",
       "category":"{{category}}",
-      "tags":{{{tags}}},
       "image":"{{{image}}}",
       "component": "{{{component}}}",
       "remotes": {},
