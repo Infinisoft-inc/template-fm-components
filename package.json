@@ -36,7 +36,7 @@
       "category":"{{category}}",
       "image":"{{{image}}}",
       "component": "{{{component}}}",
-      "remotes": {},
+      "remotes": {}
     }
   },
   "dependencies": {}
