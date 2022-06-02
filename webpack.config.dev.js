@@ -3,15 +3,17 @@
  * Infinisoft Inc.
  * www.infini-soft.com
  */
+
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
-const custom = require('./config/custom.webpack.config.prod');
-const TerserPlugin = require('terser-webpack-plugin');
+const custom = require('./config/custom.webpack.config.dev');
+const path = require('path');
 
 module.exports = merge(custom, common, {
-  mode: 'production',
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
+  mode: 'development',
+  devServer: {
+    static: path.join(process.cwd(), 'dist'),
+    hot: true,
   },
+  devtool: 'inline-source-map',
 });

@@ -1,20 +1,26 @@
 {
   "name": "{{name}}",
   "version": "0.0.1",
-  "description": "",
+  "description": "{{description}}",
   "private": true,
   "author": "Infinisoft Inc. <info@infini-soft.com>",
   "homepage": "https://www.kitchen.infini-soft.com/",
   "license": "INFINISOFT",
   "scripts": {
-    "build:dev": "yarn run build:types& webpack -c webpack.config.js",
+    "build:dev": "kli component build",
+    "build:dev:watch": "kli component build --watch-deploy",
+    "build:prod": "kli component build --prod",
+    "build:prod:watch": "kli component build --prod --watch-deploy",
+    "build:analyze": "kli component build --analyze& start analyze/bundle-stats.html",
+    "build:analyze:baseline": "kli component build --analyze-baseline& start analyze/bundle-stats.html",
     "test": "jest",
+    "test:watchAll": "jest --watchAll",
     "test:coverage": "jest --coverage&& start analyze/coverage/lcov-report/index.html",
-    "build:analyze": "webpack -c ../../../dev/config/webpack.analyze.js",
-    "build:types": "tsc -p tsconfig.json -d --emitDeclarationOnly --outFile dist/types.d.ts --esModuleInterop",
-    "build:prod": "yarn run build:types& webpack -c webpack.config.prod.js",
-    "start:dev": "webpack serve -c webpack.config.js --open",
-    "serve:dist": "serve -s dist"
+    "deploy": "kli component deploy",
+    "start:dev": "webpack serve -c webpack.config.dev.js --open",
+    "start:prod": "webpack serve -c webpack.config.prod.js --open",
+    "serve:dist": "serve -s dist",
+    "clean": "rm -rf analyze dist node_modules"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",
@@ -24,10 +30,15 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
-  "infinisoft":{
-    "moduleFederation":{
-      "component": "{{{component}}}",
-      "remotes":{}
+  "infinisoft": {
+    "moduleFederation": {
+      "title":"{{title}}",
+      "category":"{{category}}",
+      "tags":{{tags}},
+      "image":"{{image}}",
+      "component": "{{component}}",
+      "remotes": {},
     }
-  }
+  },
+  "dependencies": {}
 }
