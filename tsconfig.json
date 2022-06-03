@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
+    "outDir":"dist",
     "strict": true,
     "skipLibCheck":true,
     "paths": {
@@ -32,5 +33,9 @@
     "test",
     "docs",
     "tests"
-  ]
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "docs"
+  }
 }
