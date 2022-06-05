@@ -8,11 +8,11 @@
   "license": "INFINISOFT",
   "scripts": {
     "build:dev": "kli component build",
-    "build:dev:watch": "kli component build --watch-deploy",
+    "build:dev:watch": "kli component build --watch",
     "build:prod": "kli component build --prod",
-    "build:prod:watch": "kli component build --prod --watch-deploy",
-    "build:analyze": "kli component build --analyze& start analyze/bundle-stats.html",
-    "build:analyze:baseline": "kli component build --analyze-baseline& start analyze/bundle-stats.html",
+    "build:prod:watch": "kli component build --prod --watch",
+    "build:analyze": "kli component build --analyze --prod& start analyze/bundle-stats.html",
+    "build:analyze:baseline": "kli component build --analyze-baseline --prod& start analyze/bundle-stats.html",
     "test": "jest",
     "test:watchAll": "jest --watchAll",
     "test:coverage": "jest --coverage&& start analyze/coverage/lcov-report/index.html",
@@ -20,9 +20,8 @@
     "start:dev": "webpack serve -c webpack.config.dev.js --open",
     "start:prod": "webpack serve -c webpack.config.prod.js --open",
     "serve:dist": "serve -s dist",
-    "clean": "rm -rf analyze dist node_modules",
-    "docs":"yarn clean& tsc& typedoc",
-    "federation:hotreload":"concurrently \"kli component build --prod --watch\" \"kli component build --prod --watch --deploy\" \"kli component build --prod --watch --types\"",
+    "clean": "rm -rf analyze dist node_modules dev",
+    "config:update": "node config.js"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",
@@ -38,7 +37,12 @@
       "category":"{{category}}",
       "image":"{{{image}}}",
       "component": "{{{component}}}",
-      "remotes": {}
+      "dev":{
+        "remotes": {}
+      },
+      "prod":{
+        "remotes": {}
+      }
     }
   },
   "dependencies": {}
