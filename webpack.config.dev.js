@@ -15,5 +15,5 @@ module.exports = merge(custom, common, {
     static: path.join(process.cwd(), 'dist'),
     hot: true,
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
 });
