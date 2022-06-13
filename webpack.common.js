@@ -12,31 +12,7 @@ const {peerDependencies, name, infinisoft} = require('./package.json')
 
 module.exports = {
   context: process.cwd(),
-  plugins: [
-    new ModuleFederationPlugin({
-      name,
-      filename: 'remoteEntry.js',
-      remotes: infinisoft.moduleFederation.remotes,
-      exposes: {
-        [`./${infinisoft.moduleFederation.component}`]: './src/component',
-      },
-      shared: {
-        ...peerDependencies,
-        react: { singleton: true, eager: true, requiredVersion: peerDependencies.react },
-        'react-dom': {
-          singleton: true,
-          eager: true,
-          requiredVersion: peerDependencies['react-dom'],
-        },
-      },
-    }),
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: './config/index.html',
-    }),
-  ],
-
-  resolve: {
+   resolve: {
     cacheWithContext: false,
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
