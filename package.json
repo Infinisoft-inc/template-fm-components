@@ -21,7 +21,7 @@
     "start:prod": "webpack serve -c webpack.config.prod.js --open",
     "serve:dist": "serve -s dist",
     "clean": "rm -rf analyze dist node_modules dev",
-    "config:update": "node config.js"
+    "config:update": "kli config update"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",

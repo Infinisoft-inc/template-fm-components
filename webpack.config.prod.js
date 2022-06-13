@@ -10,6 +10,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(custom, common, {
   mode: 'production',
+  output: {
+    filename: '[name].[contenthash].js',
+    path: path.join(process.cwd(), 'dist'),
+    publicPath: 'auto',
+  },
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
